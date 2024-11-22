@@ -1,0 +1,124 @@
+
+!
+version 12.1
+no service pad
+no service timestamps debug uptime
+no service timestamps log uptime
+service password-encryption
+!
+hostname S1
+!
+enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1
+!
+ip subnet-zero
+no ip domain-lookup
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 15
+ switchport mode access
+ no ip address
+!
+interface FastEthernet0/2
+ no ip address
+!
+interface FastEthernet0/3
+ no ip address
+!
+interface FastEthernet0/4
+ no ip address
+!
+interface FastEthernet0/5
+ no ip address
+!
+interface FastEthernet0/6
+ no ip address
+!
+interface FastEthernet0/7
+ no ip address
+!
+interface FastEthernet0/8
+ no ip address
+!
+interface FastEthernet0/9
+ no ip address
+!
+interface FastEthernet0/10
+ no ip address
+!
+interface FastEthernet0/11
+ no ip address
+!
+interface FastEthernet0/12
+ no ip address
+!
+interface FastEthernet0/13
+ no ip address
+!
+interface FastEthernet0/14
+ no ip address
+!
+interface FastEthernet0/15
+ no ip address
+!
+interface FastEthernet0/16
+ no ip address
+!
+interface FastEthernet0/17
+ no ip address
+!
+interface FastEthernet0/18
+ no ip address
+!
+interface FastEthernet0/19
+ no ip address
+!
+interface FastEthernet0/20
+ no ip address
+!
+interface FastEthernet0/21
+ no ip address
+!
+interface FastEthernet0/22
+ no ip address
+!
+interface FastEthernet0/23
+ no ip address
+!
+interface FastEthernet0/24
+ no ip address
+!
+interface GigabitEthernet0/1
+ no ip address
+!
+interface GigabitEthernet0/2
+ no ip address
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan15
+ ip address 172.16.1.3 255.255.255.0
+ no ip route-cache
+!
+ip http server
+!
+banner motd CSolo personal Autorizado
+!
+line con 0
+ password 7 0822455D0A16
+ login
+line vty 0 4
+ password 7 0822455D0A16
+ login
+line vty 5 15
+ password 7 0822455D0A16
+ login
+!
+end
